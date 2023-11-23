@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang=”es”>
+<head>
+    <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="Keywords" content="Ropa, Moda, Fiestas, Alquiler,>">
+ <meta name="Description" content="Este sitio contiene permite el alquiler de vestidos de indumentaria para fiestas">
+ <meta name="Author" content="Matias y Geraldine">
+ <meta name ="Copyright" content ="derechos reservados">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="dominio/bootstrap.js"></script>
+ <link rel="stylesheet" href="diseno.css"> 
+<title>Formulario</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: #000000da;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GEMA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="pagina.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="who.html">¿Quienes somos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ubicacion.html">¿Donde estamos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tarifas.html" >Tarifas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-auto">
+              <img src="imagenes/logo.jpg" alt="Imagen del logo de la empresa" title="Iniciales de la empresa" class="logoimg"> 
+            </div>
+            <div class="col-9">
+              <h1>Formulario</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+          <fieldset>
+              <legend>Usuario</legend>
+            <form action="transferencia.php" method="post" autocomplete="off">
+                <p>
+                    <label for="NombreUsu">Usuario</label>
+                    <input type ="text" id="NombreUsu" required="required" maxlength="30" placeholder="Ingrese un usuario" name="NombreUsu">
+                (*)</p>
+
+                <p>
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" required="required" maxlength="30" placeholder="Ingrese una Contraseña" name="contrasena">
+                    (*)</p>
+            </fieldset>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <p>
+                    <label for="Nombre">Nombre</label>
+                    <input type ="text" id="Nombre" required="required" maxlength="30" placeholder="Ingrese su nombre" name="Nombre">
+
+                    (*) </p>
+                <p>
+                <label for="apellido">Apellido</label>
+                    <input type ="text" id="apellido" required="required" maxlength="30" placeholder="Ingrese su apellido" name="apellido">
+                (*)</p>
+                <p>
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" placeholder="Ingrese su Mail" name="mail">
+                    </p>
+                <p>
+                    <label for="dir">Dirección</label>
+                    <input type="text" id="dir" required="required" placeholder="Ingrese su dirección" name="dir">
+                    (*)</p>
+                <p>
+                    <label for="num">Teléfono</label>
+                    <input type="number" id="num" required="required" placeholder="Ingrese su teléfonos" name="num">
+                    (*)</p>
+                <p>
+                  <label for="sexo">Sexo</label>
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="sexo" id="hombre" checked="checked">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="sexo" id="Mujer">
+
+                </p>
+                <p>
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha" title="Elige la fecha de nacimiento" required="required">
+
+                    (*)</p>
+                <p>
+                    <label for="envio">¿Como quiere recibir su pedido?</label>
+                    <select id="envio" name="envio">
+                        <option value="0">...</option>
+                        <option value="1">Entrega domiciliaria</option>
+                        <option value="2">Pasar a buscar por el local</option>
+                    </select>
+
+                </p>
+                <p>
+                    <label for="comentarios">Comentarios para mejorar la pagina</label>
+                </p>
+                <p>
+                    <textarea name="comentarios" id="comentarios" cols="100" rows="10" title="Escribe tu comentario"></textarea>
+                </p>
+                <p>
+                    <label for="noticas">Deseo recibir noticias</label>
+                    <input type="checkbox" name="noticas" value="noticias" checked="checked">
+                </p>
+                <p>
+                    <label for="acepto">Acepto los terminos y condiciones</label>
+                    <input type="checkbox" name="acepto" value="acepto" required="required">
+                    
+                    (*)</p>
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                <input type="reset" name="reset" id="reset" value="Borrar">
+            <fieldset>
+
+            </form>
+
+
+
+
+
+      </main>
+  
+
+
+
+
+
+</body>
+</html>
